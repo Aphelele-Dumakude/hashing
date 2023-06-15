@@ -87,7 +87,7 @@ public interface MyMap<K, V> {
         K key;
         V value;
 
-        Entry(K key, V value) {
+        public Entry(K key, V value) {
             this.key = key;
             this.value = value;
         }
@@ -96,6 +96,10 @@ public interface MyMap<K, V> {
         }
         public V getValue() {
             return value;
+        }
+
+        public void setValue(V newValue) {
+            value = newValue;
         }
         @Override
         public String toString() {
